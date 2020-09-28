@@ -16,7 +16,7 @@ async def temp_help(ctx):
 
 @bot.command()
 async def temp_bot(ctx):
-    await ctx.send(f'created by <@562541986595340289>'
+    await ctx.send(f'created by <@{userid}>'
                    f'\nlanguage: python'
                    f'\napi: <https://openweathermap.org/current>'
                    f'\nsource code: <https://github.com/iamabdh>')
@@ -24,7 +24,7 @@ async def temp_bot(ctx):
 
 @bot.command()
 async def temp(ctx, city, cont="om"):
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city},{cont}&appid=37a4b1c8693077c739c87c94f38fdd8c'
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city},{cont}&appid={apiKey}'
     response = requests.get(url)
     x = response.json()
 
